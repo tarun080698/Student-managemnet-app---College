@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.project">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/student_login_icon"
+        android:label="ClgBook"
+        android:roundIcon="@mipmap/student_login_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:appComponentFactory"
+        tools:targetApi="m">
+        <activity android:name=".HomeAfterS" />
+        <activity android:name=".LoginS" />
+        <activity android:name=".AfterLS" />
+        <activity android:name=".RegisterS" />
+        <activity android:name=".ResetPass" />
+        <activity android:name=".AfterStart" />
+        <activity
+            android:name=".Start"
+            android:theme="@style/Start">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddPost"
+            android:label="@string/add_post" />
+        <activity
+            android:name=".HomeActivityG"
+            android:label="Home"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.MainActivity" />
+        </activity>
+        <activity
+            android:name=".HomeActivityL"
+            android:label="@string/title_activity_home_l"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.project.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>
